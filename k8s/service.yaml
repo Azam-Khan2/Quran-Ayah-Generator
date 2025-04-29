@@ -1,0 +1,14 @@
+# === k8s/service.yaml ===
+# Kubernetes Service to expose the deployment to the network
+apiVersion: v1
+kind: Service
+metadata:
+  name: quran-api-service
+spec:
+  selector:
+    app: quran-api
+  ports:
+    - protocol: TCP
+      port: 80  # Expose service on port 80
+      targetPort: 80  # Forward to port 80 of the pod
+  type: NodePort  # Expose service to external traffic through a node port
