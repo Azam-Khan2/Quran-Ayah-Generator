@@ -1,0 +1,22 @@
+# === k8s/deployment.yaml ===
+# Kubernetes Deployment to run one replica of the API app
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quran-api
+spec:
+  replicas: 1  # Number of pod instances
+  selector:
+    matchLabels:
+      app: quran-api
+  template:
+    metadata:
+      labels:
+        app: quran-api
+    spec:
+      containers:
+      - name: quran-api
+        image: quran-api:latest  # Use locally built image
+        imagePullPolicy: IfNotPresent  # Pull from Docker Hub if not present
+        ports:
+        - containerPort: 80  # Expose port 80 inside the container
