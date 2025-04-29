@@ -1,6 +1,6 @@
 # === README.md ===
 # Daily Quran Ayah API
-A simple Python API that returns a random ayah from the Quran.
+A simple Python API that returns a random ayah from the Quran. Created to learn how IDEs, Docker, and Kubernetes work with Python.
 
 ## How to Run
 
