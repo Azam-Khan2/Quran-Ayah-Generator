@@ -1,0 +1,4 @@
+# === requirements.txt ===
+# List of dependencies required to run the FastAPI app
+fastapi
+uvicorn
